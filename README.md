@@ -8,4 +8,4 @@
 * JAXR (Java API for XML Registries)
 * JAXP (Java API for XML Processing)
 
-### [J2EE flatform](https://docs.oracle.com/cd/E19159-01/819-3680/abfar/index.html)
+#### [J2EE Platform](https://docs.oracle.com/cd/E19159-01/819-3680/abfar/index.html)
