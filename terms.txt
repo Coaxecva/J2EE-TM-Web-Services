@@ -4,4 +4,6 @@ Web service technologies are used for Application-to-Application (A2A) integrati
 
 XML (eXtensible Markup Language), SOAP (Simple Object Access Protocol), WSDL (Web Services Description Language), and
 UDDI(Universal Description, Discovery, and Integration) are used in concert to provide Web service applications with a type
-system (XML), a messaging protocol (SOAP), an interface definition language (WSDL), and a registry for publishing Web services (UDDI).
+system (XML), a messaging protocol (SOAP), an interface definition language (WSDL), and a registry for publishing Web services
+(UDDI).
+
