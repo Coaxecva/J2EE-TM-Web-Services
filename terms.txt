@@ -1,0 +1,1 @@
+A Web service is a software application that conforms to the Web Service Interoperability Organization's Basic Profile 1.0.
