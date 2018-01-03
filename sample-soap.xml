@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<soap:Envelope
+xmlns:soap="http://schemas.xmlsoap.org/soap/envelope/"
+xmlns:addr="http://www.Monson-Haefel.com/jwsbook/ADDR" >
+<soap:Body>
+<addr:address>
+<addr:name>Amazon.com</addr:name>
+<addr:street>1516 2nd Ave</addr:street>
+<addr:city>Seattle</addr:city>
+<addr:state>WA</addr:state>
+<addr:zip>90952</addr:zip>
+</addr:address>
+</soap:Body>
+</soap:Envelope>
