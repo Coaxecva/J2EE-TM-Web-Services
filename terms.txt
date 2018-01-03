@@ -1,3 +1,5 @@
 A Web service is a software application that conforms to the Web Service Interoperability Organization's Basic Profile 1.0.
 Main purpose of Web service technologies is to allow applications on different platforms to exchange business data. 
 Web service technologies are used for Application-to-Application (A2A) integration or Business-to-Business (B2B) communication.
+
+XML (eXtensible Markup Language), SOAP (Simple Object Access Protocol), WSDL (Web Services Description Language), and UDDI(Universal Description, Discovery, and Integration) are used in concert to provide Web service applications with a type system (XML), a messaging protocol (SOAP), an interface definition language (WSDL), and a registry for publishing Web services (UDDI).
