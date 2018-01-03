@@ -7,3 +7,6 @@ UDDI(Universal Description, Discovery, and Integration) are used in concert to p
 system (XML), a messaging protocol (SOAP), an interface definition language (WSDL), and a registry for publishing Web services
 (UDDI).
 
+XML documents contain the information being exchanged between two parties, while SOAP provides a packaging and routing standard for exchanging XML documents over a network. WSDL allows anorganization to describe the types of XML documents and SOAP
+messages that must be used to interact with their Web services. Finally, UDDI allows organizations to register their Web
+services in a uniform manner within a common directory, so clients can locate their Web services and learn how to access them.
