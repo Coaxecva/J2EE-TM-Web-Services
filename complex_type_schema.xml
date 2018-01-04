@@ -5,31 +5,21 @@ targetNamespace="http://www.Monson-Haefel.com/jwsbook" >
 <element name="purchaseOrder" type="mh:PurchaseOrder" />
 <element name="address" type="mh:USAddress" />
 <complexType name="PurchaseOrder">
-<sequence>
-<element name="accountName"
-<element name="accountNumber"
-<element name="shipAddress"
-<element name="billAddress"
-<element name="book"
-<element name="total"
-</sequence>
+  <sequence>
+    <element name="accountName" type="string" />
+    <element name="accountNumber" type="unsignedShort" />
+    <element name="shipAddress" type="mh:USAddress" />
+    <element name="billAddress" type="mh:USAddress" />
+    <element name="book" type="mh:Book" />
+    <element name="total" type="float" />
+  </sequence>
 </complexType>
-type="string" />
-type="unsignedShort" />
-type="mh:USAddress" />
-type="mh:USAddress" />
-type="mh:Book" />
-type="float" />
 <complexType name="USAddress">
-<sequence>
-<element name="name"
-type="string"
-<element name="street" type="string"
-<element name="city"
-type="string"
-<element name="state"
-type="string"
-<element name="zip"
-type="string"
-</sequence>
+  <sequence>
+    <element name="name" type="string"
+    <element name="street" type="string"
+    <element name="city" type="string"
+    <element name="state" type="string"
+    <element name="zip" type="string"
+  </sequence>
 </complexType>
