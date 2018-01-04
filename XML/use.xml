@@ -1,0 +1,11 @@
+<complexType name="PurchaseOrder">
+  <sequence>
+    <element name="accountName" type="string" />
+    <element name="accountNumber" type="unsignedShort" />
+    <element name="shipAddress" type="mh:USAddress" />
+    <element name="billAddress" type="mh:USAddress" minOccurs="0" />
+    <element name="book" type="mh:Book" maxOccurs="unbounded" />
+    <element name="total" type="float" />
+  </sequence>
+  <attribute name="orderDate" type="date" use="required" />
+</complexType>
