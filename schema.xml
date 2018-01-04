@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="UTF-8"?><schema xmlns="http://www.w3.org/2001/XMLSchema"
+xmlns:mh="http://www.Monson-Haefel.com/jwsbook"
+targetNamespace="http://www.Monson-Haefel.com/jwsbook">
+<element name="address" type="mh:USAddress" />
+<complexType name="USAddress">
+<sequence>
+<element name="name"
+type="string"
+<element name="street" type="string"
+<element name="city"
+type="string"
+<element name="state"
+type="string"
+<element name="zip"
+type="string"
+</sequence>
+</complexType>
+...
+</schema>
