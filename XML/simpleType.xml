@@ -1,0 +1,6 @@
+<simpleType name="Total">
+  <restriction base="float">
+    <minInclusive value="0"/>
+    <maxExclusive value="100000"/>
+  </restriction>
+</simpleType>
