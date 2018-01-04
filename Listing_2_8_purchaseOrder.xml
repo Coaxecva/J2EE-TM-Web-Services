@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<purchaseOrder orderDate="2003-09-22" >
+<accountName>Amazon.com</accountName>
+<accountNumber>923</accountNumber>
+<address>
+<name>AMAZON.COM</name>
+<street>1850 Mercer Drive</street>
+<city>Lexington</city>
+<state>KY</state>
+<zip>40511</zip>
+</address>
+<book>
+<title>J2EE Web Services</title>
+<quantity>300</quantity>
+<wholesale-price>29.99</wholesale-price>
+</book>
+<total>8997.00</total>
+</purchaseOrder>
