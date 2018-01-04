@@ -1,0 +1,51 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<schema
+  xmlns="http://www.w3.org/2001/XMLSchema"
+  xmlns:mh="http://www.Monson-Haefel.com/jwsbook"
+  targetNamespace="http://www.Monson-Haefel.com/jwsbook"
+  elementFormDefault="qualified">
+  <element name="address" type="mh:Address"/>
+  <element name="purchaseOrder" type="mh:PurchaseOrder"/>
+  <complexType name="PurchaseOrder">
+    <sequence>
+      <element name="accountName" type="string"/>
+      <element name="accountNumber" type="unsignedShort"/>
+      <element name="shipAddress" type="mh:Address"/>
+      <element name="billAddress" type="mh:Address"/>
+      <element name="book" type="mh:Book"/>
+      <element name="total" type="float"/>
+    </sequence>
+  <attribute name="orderDate" type="date"/>
+  </complexType>
+...
+</schema>
+
+<!-- An instance -->
+
+<?xml version="1.0" encoding="UTF-8"?>
+<purchaseOrder orderDate="2003-09-22"
+  xmlns="http://www.Monson-Haefel.com/jwsbook"
+  xmlns:mh="http://www.Monson-Haefel.com/jwsbook"xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+  xsi:schemaLocation="http://www.Monson-Haefel.com/jwsbook
+  http://www.Monson-Haefel.com/jwsbook/po2.xsd">
+  <accountName>Amazon.com</accountName>
+  <accountNumber>923</accountNumber>
+    <shipAddress xsi:type="mh:UKAddress">
+      <name>Amazon.co.uk</name>
+      <street>Ridgmont Road</street>
+      <city>Bedford</city>
+      <country>United Kingdom</country>
+      <postcode>MK43 0ZA</postcode>
+    </shipAddress>
+    <billAddress xsi:type="mh:BriefUSAddress">
+      <name>Amazon.com</name>
+      <street>1516 2nd Ave</street>
+      <zip>90952</zip>
+    </billAddress>
+    <book>
+      <title>Java Web Services</title>
+      <quantity>300</quantity>
+      <wholesale-price>24.99</wholesale-price>
+    </book>
+  <total>8997.00</total>
+</purchaseOrder>
