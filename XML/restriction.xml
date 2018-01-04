@@ -1,0 +1,11 @@
+<complexType name="BriefUSAddress">
+<complexContent>
+  <restriction base="mh:USAddress">
+    <sequence>
+      <element name="name" type="string"/>
+      <element name="street" type="string"/>
+      <element name="zip" type="string"/>
+    </sequence><attribute name="category" type="string" default="business"/>
+  </restriction>
+</complexContent>
+</complexType>
