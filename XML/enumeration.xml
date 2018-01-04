@@ -1,0 +1,19 @@
+<simpleType name="USState">
+  <restriction base="string">
+    <enumeration value="AK"/> <!-- Alaska  -->
+    <enumeration value="AL"/> <!-- Alabama -->
+    <enumeration value="AR"/> <!-- Arkansas -->
+    <!-- and so on -->
+  </restriction>
+</simpleType>
+
+<complexType name="USAddress" final="extension">
+  <complexContent>
+    <extension base="mh:Address">
+      <sequence>
+        <element name="state" type="mh:USState"/>
+        <element name="zip" type="mh:USZipCode"/>
+      </sequence>
+    </extension>
+  </complexContent>
+</complexType>
