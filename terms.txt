@@ -12,3 +12,5 @@ messages that must be used to interact with their Web services. Finally, UDDI al
 services in a uniform manner within a common directory, so clients can locate their Web services and learn how to access them.
 
 An XML document may be well formed, but invalid because it is not organized according to its schema.
+A schema is used to define elements and attributes in a markup language and verify the correctness of an XML instance;
+it's not a computer program.
