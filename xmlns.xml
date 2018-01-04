@@ -1,19 +1,23 @@
 <?xml version="1.0" encoding="UTF-8" ?>
-<purchaseOrder orderDate="2003-09-22"
-xmlns="http://www.Monson-Haefel.com/jwsbook/PO">
-<accountName>Amazon.com</accountName>
-<accountNumber>923</accountNumber>
-<address xmlns="http://www.Monson-Haefel.com/jwsbook/ADDR">
-<name>AMAZON.COM</name>
-<street>1850 Mercer Drive</street>
-<city>Lexington</city>
-<state>KY</state>
-<zip>40511</zip>
-</address>
-<book>
-<title>J2EE Web Services</title>
-<quantity>300</quantity>
-<wholesale-price>29.99</wholesale-price>
-</book>
-<total>8997.00</total>
-</purchaseOrder>
+<definitions name="Address-Update"
+targetNamespace="http://www.monson-haefel.org/jwsbook/Address-Upd
+xmlns:tns="http://www.monson-haefel.org/jwsbook/Address-Update"
+xmlns:addr="http://www.Monson-Haefel.com/jwsbook/ADDR"
+xmlns:soap="http://schemas.xmlsoap.org/wsdl/soap/"
+xmlns:xsd="http://www.w3.org/2001/XMLSchema"
+xmlns="http://schemas.xmlsoap.org/wsdl/">
+...
+<!-- message elements describe the paramters and return values -->
+<message name="AddressMessage">
+<part name="address" element="addr:address" />
+</message>
+...
+<!-- service tells us the Internet address of a Web service -->
+<service name="AddressUpdateService">
+<documentation>Update a customers mailing address</documentation>
+<port name="AddressUpdate_Port" binding="tns:AddressUpdate_Binding
+<soap:address
+location="http://www.monson-haefel.org/jwsbook/BookPrice" />
+</port>
+</service>
+</definitions>
