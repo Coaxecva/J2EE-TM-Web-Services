@@ -1,0 +1,63 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<schema
+  xmlns="http://www.w3.org/2001/XMLSchema"
+  xmlns:mh="http://www.Monson-Haefel.com/jwsbook"
+  targetNamespace="http://www.Monson-Haefel.com/jwsbook">
+<element name="purchaseOrder" type="mh:PurchaseOrder"/>
+<complexType name="PurchaseOrder">
+  <sequence>
+    <element name="accountName" type="string"/>
+    <element name="accountNumber" type="unsignedShort"/>
+    <element name="shipAddress" type="mh:USAddress"/>
+    <element name="billAddress" type="mh:USAddress"/>
+    <element name="book" type="mh:Book"/>
+    <element name="total" type="float"/>
+  </sequence>
+<attribute name="orderDate" type="date"/>
+</complexType>
+<complexType name="USAddress">
+  <sequence>
+    <element name="name" type="string"/>
+    <element name="street" type="string"/>
+    <element name="city" type="string"/>
+    <element name="state" type="string"/>
+    <element name="zip" type="string"/>
+  </sequence>
+</complexType>
+<complexType name="Book">
+  <sequence>
+    <element name="title" type="string"/>
+    <element name="quantity" type="unsignedShort"/>
+    <element name="wholesale-price" type="float"/>
+  </sequence>
+</complexType>
+</schema>
+
+<!-- An Instance -->
+
+<?xml version="1.0" encoding="UTF-8"?>
+<po:purchaseOrder orderDate="2003-09-22"
+xmlns:po="http://www.Monson-Haefel.com/jwsbook">
+<accountName>Amazon.com</accountName>
+<accountNumber>923</accountNumber>
+  <shipAddress>
+    <name>AMAZON.COM</name>
+    <street>1850 Mercer Drive</street>
+    <city>Lexington</city>
+    <state>KY</state>
+    <zip>40511</zip>
+  </shipAddress>
+  <billAddress>
+    <name>Amazon.com</name>
+    <street>1516 2nd Ave</street>
+    <city>Seattle</city>
+    <state>WA</state>
+    <zip>90952</zip>
+   </billAddress>
+  <book>
+    <title>J2EE Web Services</title>
+    <quantity>300</quantity>
+    <wholesale-price>24.99</wholesale-price>
+  </book>
+<total>8997.00</total>
+</po:purchaseOrder>
