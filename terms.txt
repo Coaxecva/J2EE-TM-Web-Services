@@ -19,3 +19,7 @@ The names of XML schema types are case-sensitive. When an element declares that 
 both the namespace and the name of that type exactly as the type declares them.
 
 According to the WS-I Basic Profile 1.0, Web services must support all of the XML schema features.
+
+JAX-RPC maps some of the XML schema built-in types to Java primitives, and basic complex types to Java beans. JAX-RPC can map
+most derived complex types to Java beans, but not all. Similar limitations are found in other platforms like .NET and 
+SOAP::Lite for Perl.
