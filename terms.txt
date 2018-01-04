@@ -17,3 +17,5 @@ it's not a computer program.
 
 The names of XML schema types are case-sensitive. When an element declares that it is of a particular type, it must specify
 both the namespace and the name of that type exactly as the type declares them.
+
+According to the WS-I Basic Profile 1.0, Web services must support all of the XML schema features.
