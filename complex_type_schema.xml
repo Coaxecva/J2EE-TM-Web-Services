@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<schema xmlns="http://www.w3.org/2001/XMLSchema"
+xmlns:mh="http://www.Monson-Haefel.com/jwsbook"
+targetNamespace="http://www.Monson-Haefel.com/jwsbook" >
+<element name="purchaseOrder" type="mh:PurchaseOrder" />
+<element name="address" type="mh:USAddress" />
+<complexType name="PurchaseOrder">
+<sequence>
+<element name="accountName"
+<element name="accountNumber"
+<element name="shipAddress"
+<element name="billAddress"
+<element name="book"
+<element name="total"
+</sequence>
+</complexType>
+type="string" />
+type="unsignedShort" />
+type="mh:USAddress" />
+type="mh:USAddress" />
+type="mh:Book" />
+type="float" />
+<complexType name="USAddress">
+<sequence>
+<element name="name"
+type="string"
+<element name="street" type="string"
+<element name="city"
+type="string"
+<element name="state"
+type="string"
+<element name="zip"
+type="string"
+</sequence>
+</complexType>
