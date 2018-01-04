@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<soap:Envelope
+  xmlns:soap="http://schemas.xmlsoap.org/soap/envelope/" >
+  <soap:Body>
+    <po:purchaseOrder orderDate="2003-09-22"
+    xmlns:po="http://www.Monson-Haefel.com/jwsbook/PO">
+      <po:accountName>Amazon.com</po:accountName>
+      <po:accountNumber>923</po:accountNumber>
+      <po:address>
+        <po:name>AMAZON.COM</po:name>
+        <po:street>1850 Mercer Drive</po:street>
+        <po:city>Lexington</po:city>
+        <po:state>KY</po:state>
+        <po:zip>40511</po:zip>
+      </po:address>
+      <po:book>
+        <po:title>J2EE Web Services</po:title>
+        <po:quantity>300</po:quantity>
+        <po:wholesale-price>24.99</po:wholesale-price>
+      </po:book>
+    </po:purchaseOrder>
+  </soap:Body>
+</soap:Envelope>
