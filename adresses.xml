@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<addresses>
+<address category="friend">
+<name>Bill Frankenfiller</name>
+<street>3243 West 1st Ave.</street>
+<city>Madison</city>
+<state>WI</state>
+<zip>53591</zip>
+</address>
+<address category="business">
+<name>Amazon.com</name>
+<street>1516 2nd Ave</street>
+<city>Seattle</city>
+<state>WA</state>
+<zip>90952</zip>
+</address>
+</addresses>
