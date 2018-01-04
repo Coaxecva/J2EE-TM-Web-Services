@@ -1,12 +1,12 @@
 /**
 <complexType name="USAddress">
-<sequence>
-<element name="name" type="string" />
-<element name="street" type="string" />
-<element name="city" type="string" />
-<element name="state" type="string" />
-<element name="zip" type="string" />
-</sequence>
+  <sequence>
+    <element name="name" type="string" />
+    <element name="street" type="string" />
+    <element name="city" type="string" />
+    <element name="state" type="string" />
+    <element name="zip" type="string" />
+  </sequence>
 </complexType>
 */
 
