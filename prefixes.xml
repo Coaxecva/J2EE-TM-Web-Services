@@ -5,15 +5,15 @@ xmlns:addr="http://www.Monson-Haefel.com/jwsbook/ADDR">
 <po:accountName>Amazon.com</po:accountName>
 <po:accountNumber>923</po:accountNumber>
 <addr:address>
-<addr:name>AMAZON.COM</addr:name>
-<addr:street>1850 Mercer Drive</addr:street>
-<addr:city>Lexington</addr:city><addr:state>KY</addr:state>
-<addr:zip>40511</addr:zip>
+  <addr:name>AMAZON.COM</addr:name>
+  <addr:street>1850 Mercer Drive</addr:street>
+  <addr:city>Lexington</addr:city><addr:state>KY</addr:state>
+  <addr:zip>40511</addr:zip>
 </addr:address>
 <po:book>
-<po:title>J2EE Web Services</po:title>
-<po:quantity>300</po:quantity>
-<po:wholesale-price>29.99</po:wholesale-price>
+  <po:title>J2EE Web Services</po:title>
+  <po:quantity>300</po:quantity>
+  <po:wholesale-price>29.99</po:wholesale-price>
 </po:book>
 <po:total>8997.00</po:total>
 </po:purchaseOrder>
