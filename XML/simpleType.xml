@@ -1,6 +1,25 @@
-<simpleType name="Total">
-  <restriction base="float">
-    <minInclusive value="0"/>
-    <maxExclusive value="100000"/>
-  </restriction>
-</simpleType>
+<schema
+  xmlns="http://www.w3.org/2001/XMLSchema"
+  xmlns:mh="http://www.Monson-Haefel.com/jwsbook"
+  targetNamespace="http://www.Monson-Haefel.com/jwsbook"
+  elementFormDefault="qualified" >
+...
+  <simpleType name="Total">
+    <restriction base="float">
+      <minInclusive value="0.00"/>
+      <maxExclusive value="100000.00"/>
+    </restriction>
+  </simpleType>
+  <complexType name="PurchaseOrder">
+    <sequence>
+      <element name="accountName" type="string"/>
+      <element name="accountNumber" type="unsignedShort"/>
+      <element name="shipAddress" type="mh:Address"/>
+      <element name="billAddress" type="mh:Address"/>
+      <element name="book" type="mh:Book"/>
+      <element name="total" type="mh:Total"/>
+    </sequence>
+  <attribute name="orderDate" type="date"/>
+  </complexType>
+...
+</schema>
