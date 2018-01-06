@@ -1,0 +1,30 @@
+<!-- book and total elements are nested anonymous types, while USAddress remains a named type that is defined elsewhere. -->
+
+<element name="purchaseOrder">
+  <complexType>
+    <sequence>
+      <element name="accountName" type="string"/>
+      <element name="accountNumber" type="unsignedShort"/>
+      <element name="shipAddress" type="mh:Address"/>
+      <element name="billAddress" type="mh:Address"/>
+      <element name="book">
+        <complexType>
+          <sequence>
+            <element name="title" type="string"/>
+            <element name="quantity" type="unsignedShort"/><element name="wholesale-price" type="float"/>
+          </sequence>
+        </complexType>
+      </element>
+      <element name="total">
+        <simpleType>
+          <restriction base='float'>
+            <minInclusive value="0"/>
+            <maxExclusive value="100000"/>
+            <pattern value="[0-9]+\.[0-9]{2}"/>
+          </restriction>
+        </simpleType>
+      </element>
+      </sequence>
+  <attribute name="orderDate" type="date"/>
+  </complexType>
+</element>
