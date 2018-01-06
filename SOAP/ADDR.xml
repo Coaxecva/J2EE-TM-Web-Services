@@ -1,0 +1,59 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<schema
+  targetNamespace="http://www.Monson-Haefel.com/addr"
+  xmlns:addr="http://www.Monson-Haefel.com/addr"
+  xmlns="http://www.w3.org/2001/XMLSchema">
+  <element name="address" type="addr:Address"/>
+    <simpleType name="USZipCode">
+      <restriction base="string">
+        <pattern value="[0-9]{5}(-[0-9]{4})?"/>
+      </restriction>
+    </simpleType>
+  <simpleType name="USState">
+    <restriction base="string">
+      <enumeration value="AK"/> <!-- Alaska  -->
+      <enumeration value="AL"/> <!-- Alabama -->
+      <enumeration value="AR"/> <!-- Arkansas -->
+      <!-- and so on -->
+    </restriction>
+  </simpleType>
+  <complexType name="Address" abstract="true">
+    <sequence>
+      <element name="name" type="string"/>
+      <element name="street" type="string" maxOccurs="unbounded"/>
+      <element name="city" type="string"/>
+      <element name="country" type="string"/>
+    </sequence>
+  <attribute name="category" type="string" default="business"/>
+  </complexType>
+  <complexType name="USAddress" final="extension"><complexContent>
+    <extension base="addr:Address">
+      <sequence>
+        <element name="state" type="addr:USState"/>
+        <element name="zip" type="addr:USZipCode"/>
+      </sequence>
+    </extension>
+  </complexContent>
+  </complexType>
+  <complexType name="UKAddress">
+    <complexContent>
+      <extension base="addr:Address">
+        <sequence>
+          <element name="postcode" type="string"/>
+        </sequence>
+      </extension>
+    </complexContent>
+  </complexType>
+  <complexType name="BriefUSAddress">
+    <complexContent>
+      <restriction base="addr:USAddress">
+        <sequence>
+          <element name="name" type="string"/>
+          <element name="street" type="string"/>
+          <element name="zip" type="addr:USZipCode"/>
+        </sequence>
+        <attribute name="category" type="string" default="business"/
+      </restriction>
+    </complexContent>
+  </complexType>
+</schema>
