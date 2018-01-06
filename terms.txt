@@ -26,3 +26,7 @@ SOAP::Lite for Perl.
 
 You cannot omit an element from a restriction unless the parent type declared it to be optional(minOccurs="0"). In addition,
 the derived type's occurrence constraints cannot be less strict than those of its base type.
+
+Web services can use One-Way messaging or Request/Response messaging. In the former, SOAP messages travel in only one
+direction, from a sender to a receiver. In the latter, a SOAP message travels from the sender to the receiver, which is
+expected to send a reply back to the sender.
