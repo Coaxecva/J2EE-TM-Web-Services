@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<soap:Envelope
+  xmlns:soap="http://schemas.xmlsoap.org/soap/envelope/"
+  xmlns:mi="http://www.Monson-Haefel.com/jwsbook/message-id" >
+  <soap:Header>
+    <mi:message-id>11d1def534ea:b1c5fa:f3bfb4dcd7:-8000</mi:message-
+  </soap:Header>
+  <soap:Body>
+    <!-- Application-specific data goes here -->
+  </soap:Body>
+</soap:Envelope>
