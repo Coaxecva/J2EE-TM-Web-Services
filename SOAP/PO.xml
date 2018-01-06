@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<schema
+  targetNamespace="http://www.Monson-Haefel.com/jwsbook/PO"
+  xmlns:po="http://www.Monson-Haefel.com/jwsbook/PO"
+  xmlns="http://www.w3.org/2001/XMLSchema">
+    <simpleType name="Total">
+      <restriction base="float">
+        <minInclusive value="0.00"/>
+        <maxExclusive value="100000.00"/>
+        <pattern value="[0-9]+\.[0-9]{2}"/>
+      </restriction>
+    </simpleType>
+  <complexType name="Book">
+    <sequence>
+      <element name="title" type="string"/>
+      <element name="quantity" type="unsignedShort"/>
+      <element name="wholesale-price" type="float"/>
+    </sequence>
+  </complexType>
+</schema>
