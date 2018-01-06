@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<schema
+  targetNamespace="http://www.Monson-Haefel.com/jwsbook/PO"
+  xmlns:po="http://www.Monson-Haefel.com/jwsbook/PO"
+  xmlns:addr="http://www.Monson-Haefel.com/jwsbook/ADDR"
+  xmlns="http://www.w3.org/2001/XMLSchema">
+  <include
+  schemaLocation="http://www.Monson-Haefel.com/jwsbook/po.xsd" />
+  <import namespace="http://www.Monson-Haefel.com/jwsbook/ADDR"
+  schemaLocation="http://www.Monson-Haefel.com/jwsbook/addr.xsd" />
+    <element name="purchaseOrder" type="po:PurchaseOrder"/>
+    <complexType name="PurchaseOrder">
+      <sequence>
+        <element name="accountName" type="string"/>
+        <element name="accountNumber" type="unsignedShort"/>
+        <element name="shipAddress" type="addr:Address"/>
+        <element name="billAddress" type="addr:Address"/>
+        <element name="book" type="po:Book"/>
+        <element name="total" type="po:Total"/>
+      </sequence>
+      <attribute name="orderDate" type="date"/>
+    </complexType>
+</schema>
