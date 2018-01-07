@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<soap:Envelope
+  xmlns:soap="http://schemas.xmlsoap.org/soap/envelope/"
+  xmlns:mi="http://www.Monson-Haefel.com/jwsbook/message-id"
+  xmlns:proc="http://www.Monson-Haefel.com/jwsbook/processed-by">
+  <soap:Header>
+    <mi:message-id soap:actor="http://www.Monson-Haefel.com/logger"
+      11d1def534ea:b1c5fa:f3bfb4dcd7:-8000
+    </mi:message-id>
+    <proc:processed-by
+      soap:actor=" http://schemas.xmlsoap.org/soap/actor/next">
+      <node>
+        <time-in-millis>1013694680000</time-in-millis>
+        <identity>http://www.customer.com</identity>
+      </node>
+    </proc:processed-by>
+  </soap:Header>
+  <soap:Body>
+    <!-- Application-specific data goes here -->
+  </soap:Body>
+</soap:Envelope>
+
+<!-- In this scenario, the intermediary node fulfills two roles: it's both a logger and the next receiver. -->
