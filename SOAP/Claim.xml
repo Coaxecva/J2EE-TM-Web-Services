@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<soap:Envelope
+  xmlns:soap="http://schemas.xmlsoap.org/soap/envelope/"
+  <soap:Header>
+    <wsi:Claim conformsTo="http://ws-i.org/profiles/basic/1.0"
+    xmlns:wsi="http://ws-i.org/schemas/conformanceClaim/" />
+  </soap:Header>
+  <soap:Body sec:id="Body">
+    <!-- Application-specific data goes here -->
+  </soap:Body>
+</soap:Envelope>
+
+<!-- an optional conformance header block that indicates that the SOAP message complies with the BP -->
