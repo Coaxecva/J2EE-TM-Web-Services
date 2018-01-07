@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<soap:Envelope
+  xmlns:soap="http://schemas.xmlsoap.org/soap/envelope/"
+  xmlns:proc="http://www.Monson-Haefel.com/jwsbook/processed-by">
+  <soap:Header>
+    <proc:processed-by
+      soap:actor="http://schemas.xmlsoap.org/soap/actor/next"
+      soap:mustUnderstand="1" >
+        <node>
+          <time-in-millis>1013694684723</time-in-millis>
+          <identity>http://local/SOAPClient2</identity>
+        </node>
+        <node>
+          <time-in-millis>1013694685023</time-in-millis>
+          <identity>http://www.Monson-Haefel.com/logger</identity>
+        </node>
+    </proc:processed-by>
+  </soap:Header>
+  <soap:Body>
+    <!-- Application-specific data goes here -->
+  </soap:Body>
+</soap:Envelope>
