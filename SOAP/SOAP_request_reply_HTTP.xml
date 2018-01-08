@@ -1,4 +1,3 @@
-
 <!-- A SOAP Request over HTTP -->
 POST /jwsbook/BookQuote HTTP/1.1
 Host: www.Monson-Haefel.com
@@ -17,7 +16,6 @@ xmlns:mh="http://www.Monson-Haefel.com/jwsbook/BookQuote">
 </soap:Envelope>
 
 <!-- A SOAP Reply over HTTP -->
-
 HTTP/1.1 200 OK
 Content-Type: text/xml; charset='utf-8'
 Content-Length: 311
