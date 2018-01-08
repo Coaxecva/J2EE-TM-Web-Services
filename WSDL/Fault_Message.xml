@@ -1,0 +1,27 @@
+<!-- Declaring a Fault Message -->
+
+<definitions name="BookQuote" ...>
+  <types>
+    <xsd:schema targetNamespace="http://www.Monson-Haefel.com/jwsboo
+    <!-- Import the PurchaseOrder XML schema document -->
+      <xsd:element name="InvalidIsbnFaultDetail" >
+        <xsd:complexType>
+          <xsd:sequence>
+            <xsd:element name="offending-value" type="xsd:string"/>
+            <xsd:element name="conformance-rules" type="xsd:string"
+          </xsd:sequence>
+        </xsd:complexType>
+      </xsd:element>
+    </xsd:schema>
+  </types>
+  <!-- message elements describe the input and output parameters -->
+  <message name="GetBookPriceRequest">
+    <part name="isbn" type="xsd:string" />
+  </message>
+  <message name="GetBookPriceResponse">
+    <part name="price" type="xsd:float" />
+  </message>
+  <message name="InvalidArgumentFault">
+    <part name="error_message" element="mh:InvalidIsbnFaultDetail" /
+  </message>
+</definitions>
