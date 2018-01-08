@@ -6,13 +6,13 @@ Content-Length: 295
 SOAPAction=""
 <?xml version="1.0" encoding="UTF-8"?>
 <soap:Envelope
-xmlns:soap="http://schemas.xmlsoap.org/soap/envelope/"
-xmlns:mh="http://www.Monson-Haefel.com/jwsbook/BookQuote">
-<soap:Body>
-<mh:getBookPrice>
-<isbn>0321146182</isbn>
-</mh:getBookPrice>
-</soap:Body>
+  xmlns:soap="http://schemas.xmlsoap.org/soap/envelope/"
+  xmlns:mh="http://www.Monson-Haefel.com/jwsbook/BookQuote">
+  <soap:Body>
+    <mh:getBookPrice>
+      <isbn>0321146182</isbn>
+    </mh:getBookPrice>
+  </soap:Body>
 </soap:Envelope>
 
 <!-- A SOAP Reply over HTTP -->
@@ -21,11 +21,11 @@ Content-Type: text/xml; charset='utf-8'
 Content-Length: 311
 <?xml version="1.0" encoding="UTF-8"?>
 <soap:Envelope
-xmlns:soap="http://schemas.xmlsoap.org/soap/envelope/"
-xmlns:mh="http://www.Monson-Haefel.com/jwsbook/BookQuote" >
-<soap:Body>
-<mh:getBookPriceResponse>
-<result>24.99</result>
-</mh:getBookPriceResponse>
-</soap:Body>
+  xmlns:soap="http://schemas.xmlsoap.org/soap/envelope/"
+  xmlns:mh="http://www.Monson-Haefel.com/jwsbook/BookQuote" >
+  <soap:Body>
+    <mh:getBookPriceResponse>
+      <result>24.99</result>
+    </mh:getBookPriceResponse>
+  </soap:Body>
 </soap:Envelope>
