@@ -1,0 +1,29 @@
+<!-- Using XML Schema Types Defined in the WSDL types Element -->
+
+<?xml version="1.0" encoding="UTF-8"?>
+<definitions name="BookQuoteWS"
+  targetNamespace="http://www.Monson-Haefel.com/jwsbook/BookQuote"
+  xmlns:mh="http://www.Monson-Haefel.com/jwsbook/BookQuote"
+  xmlns:soapbind="http://schemas.xmlsoap.org/wsdl/soap/"
+  xmlns:xsd="http://www.w3.org/2001/XMLSchema"
+  xmlns="http://schemas.xmlsoap.org/wsdl/">
+  <types>
+    <xsd:schema
+      targetNamespace="http://www.Monson-Haefel.com/jwsbook/BookQuote
+      <!-- The ISBN simple type -->
+      <xsd:simpleType name="ISBN">
+        <xsd:restriction base="xsd:string">
+          <xsd:pattern value="[0-9]{9}[0-9Xx]" />
+        </xsd:restriction>
+      </xsd:simpleType>
+    </xsd:schema>
+  </types>
+  <!-- message elements describe the input and output parameters -->
+  <message name="GetBookPriceRequest">
+    <part name="isbn" type="mh:ISBN" />
+  </message>
+  <message name="GetBookPriceResponse">
+    <part name="price" type="xsd:float" />
+  </message>
+...
+</definitions>
