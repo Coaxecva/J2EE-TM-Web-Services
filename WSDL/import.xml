@@ -1,0 +1,11 @@
+<definitions name="AllMhWebServices"
+  xmlns="http://schemas.xmlsoap.org/wsdl/">
+  
+  <import namespace="http://www.Monson-Haefel.com/jwsbook/BookQuot
+    location="http://www.Monson-Haefel.com/jwsbook/BookPrice.wsdl"/
+  <import namespace="http://www.Monson-Haefel.com/jwsbook/po"
+    location="http://www.Monson-Haefel.com/jwsbook/wsdl/PurchaseOrd
+  <import namespace="http://www.Monson-Haefel.com/jwsbook/Shipping
+    location="http://www.Monson-Haefel.com/jwsbook/wsdl/Shipping.ws
+    
+</definitions >
