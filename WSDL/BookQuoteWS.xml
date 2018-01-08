@@ -12,14 +12,14 @@
   <message name="GetBookPriceResponse">
     <part name="price" type="xsd:float" />
   </message>
-  <!-- portType element describes the abstract interface of a Web se
+  <!-- portType element describes the abstract interface of a Web service -->
   <portType name="BookQuote">
     <operation name="getBookPrice">
       <input name="isbn" message="mh:GetBookPriceRequest"/>
       <output name="price" message="mh:GetBookPriceResponse"/>
     </operation>
   </portType>
-<!-- binding tells us which protocols and encoding styles are used
+<!-- binding tells us which protocols and encoding styles are used -->
 <binding name="BookPrice_Binding" type="mh:BookQuote">
   <soapbind:binding style="rpc"
   transport="http://schemas.xmlsoap.org/soap/http"/>
