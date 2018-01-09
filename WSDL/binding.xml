@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<definitions name="BookQuoteWS"
+  targetNamespace="http://www.Monson-Haefel.com/jwsbook/BookQuote"
+  xmlns:mh="http://www.Monson-Haefel.com/jwsbook/BookQuote"
+  xmlns:soapbind="http://schemas.xmlsoap.org/wsdl/soap/"
+  xmlns:xsd="http://www.w3.org/2001/XMLSchema"
+  xmlns="http://schemas.xmlsoap.org/wsdl/">
+  ...
+  <!-- binding tells us which protocols and encoding styles are used -->
+  <binding name="BookPrice_Binding" type="mh:BookQuote">
+    <soapbind:binding style="rpc"
+    transport="http://schemas.xmlsoap.org/soap/http"/>
+    <operation name="getBookPrice">
+      <soapbind:operation style="rpc"
+        soapAction=
+        "http://www.Monson-Haefel.com/jwsbook/BookQuote/GetBookPrice"/>
+        <input>
+          <soapbind:body use="literal"
+          namespace="http://www.Monson-Haefel.com/jwsbook/BookQuote"/>
+        </input>
+        <output>
+          <soapbind:body use="literal"
+          namespace="http://www.Monson-Haefel.com/jwsbook/BookQuote"/>
+        </output>
+    </operation>
+   </binding>
+</definitions>    
