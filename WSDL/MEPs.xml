@@ -1,0 +1,37 @@
+<!-- Request/Response Messaging -->
+<!-- portType element describes the abstract interface of a Web service -->
+<portType name="BookQuote">
+  <operation name="getBookPrice">
+    <input name="isbn" message="mh:GetBookPriceRequest"/>
+    <output name="price" message="mh:GetBookPriceResponse"/>
+    <fault name="InvalidArgumentFault" message="mh:InvalidArgumentFault"/>
+    <fault name="SecurityFault" message="mh:SecurityFault"/>
+  </operation>
+</portType>
+
+<!-- One-Way Messaging -->
+<portType name="SubmitPurchaseOrder_PortType">
+  <operation name="SubmitPurchaseOrder">
+    <input name="order" message="mh:SubmitPurchaseOrderMessage"/>
+  </operation>
+</portType>
+
+<!-- Notification and Solicit/Response Messaging
+Neither the Notification nor the Solicit/Response MEP can be used in J2EE Web
+Services. The unwillingness to support these styles is practical because they
+are poorly specified by the WSDL 1.1 specification and tend to introduce more
+problems than they solve. On the other hand, it's probably a good idea for you
+to understand the basic mechanics of these MEPs just for general purposes.
+In Notification messaging the Web service sends a message to a client, but
+doesn't expect a reply message. A Web service that uses the Notification MEP
+follows the push model of distributed computing. The assumption is that the
+client has registered with the Web service to receive messages (notifications)
+about an event. The clients that register to receive notifications are called
+subscribers. In Notification messaging, the portType contains an output
+element but no input message definitions.
+Solicit/Response is similar to Notification, except that the client is expected to
+respond to the Web service. As with Notification messaging, clients of Solicit/
+Response Web services must subscribe to the service in order to receive
+messages. In this MEP the portType first declares an output message, then an
+input message​ exactly the reverse of a Request/Response operation.
+-->
