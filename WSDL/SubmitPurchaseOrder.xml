@@ -1,0 +1,23 @@
+<!-- a WSDL document that describes a SubmitPurchaseOrder Web Service. 
+The Purchase Order schema defined is imported into the types element of the WSDL document. -->
+
+<?xml version="1.0" encoding="UTF-8"?>
+<definitions name="PurchaseOrderWS"
+  targetNamespace="http://www.Monson-Haefel.com/jwsbook/PO"
+  xmlns:mh="http://www.Monson-Haefel.com/jwsbook/PO"
+  xmlns:soapbind="http://schemas.xmlsoap.org/wsdl/soap/"
+  xmlns:xsd="http://www.w3.org/2001/XMLSchema"
+  xmlns="http://schemas.xmlsoap.org/wsdl/">
+  <types>
+    <xsd:schema targetNamespace="http://www.Monson-Haefel.com/jwsboo
+      <!-- Import the PurchaseOrder XML schema document -->
+      <xsd:import namespace="http://www.Monson-Haefel.com/jwsbook/PO
+        schemaLocation="http://www.Monson-Haefel.com/jwsbook/po.xsd"
+    </xsd:schema>
+  </types>
+  <!-- message elements describe the input and output parameters -->
+  <message name="SubmitPurchaseOrderMessage">
+    <part name="order" element="mh:purchaseOrder" />
+  </message>
+...
+</definitions>
