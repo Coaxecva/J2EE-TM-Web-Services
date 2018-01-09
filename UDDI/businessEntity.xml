@@ -1,0 +1,46 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<businessEntity businessKey="01B1FA80-2A15-11D6-9B59-000629DC0A53"
+  xmlns="urn:uddi-org:api_v2">
+  <discoveryURLs>
+    <discoveryURL useType="buinessEntity">
+      http://uddi.ibm.com/registry/uddiget?businessKey=01B1FA80...00
+    </discoveryURL>
+  </discoveryURLs>
+  <name>Monson-Haefel Books, Inc.</name>
+  <description xml:lang="en">Technical Book Wholesaler</description>
+  <contacts>
+    <contact>
+      <description xml:lang="en">Web Service Tech. Support</descript>
+      <personName>Stanley Kubrick</personName>
+      <phone useType="Voice">01-555-222-4000</phone>
+    </contact>
+  </contacts>
+  <businessServices>
+    <!-- businessService data goes here -->
+  </businessServices>
+  <identifierBag>
+    <!-- D-U-N-S Number Identifier System -->
+    <keyedReference
+      keyName="D-U-N-S"
+      keyValue="03-892-4499"
+      tModelKey="uuid:8609C81E-EE1F-4D5A-B202-3EB13AD01823"/>
+  </identifierBag>
+  <categoryBag>
+    <!-- North American Industry Classification System (NAICS) 1997
+    <keyedReference
+      keyName="Book, Periodical, and Newspaper Wholesalers"
+      keyValue="42292"
+      tModelKey="uuid:C0B9FE13-179F-413D-8A5B-5004DB8E5BB2"/>
+    <!-- Universal Standard   Products and Services Classification (UN
+    Version 6.3 -->
+    <keyedReference
+      keyName="Educational or vocational textbooks"
+      keyValue="55.10.15.09.00"
+      tModelKey="uuid:CD153256-086A-4236-B336-6BDCBDCC6634"/>
+    <!-- ISO 3166 Geographic Taxonomy -->
+    <keyedReference
+      keyName="Minnesota, USA"
+      keyValue="US-MN"
+      tModelKey="uuid:4E49A8D6-D5A2-4FC2-93A0-0411D8D19E88"/>
+    </categoryBag>
+</businessEntity>
