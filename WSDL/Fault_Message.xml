@@ -2,7 +2,7 @@
 
 <definitions name="BookQuote" ...>
   <types>
-    <xsd:schema targetNamespace="http://www.Monson-Haefel.com/jwsboo >
+    <xsd:schema targetNamespace="http://www.Monson-Haefel.com/jwsbookquote" >
     <!-- Import the PurchaseOrder XML schema document -->
       <xsd:element name="InvalidIsbnFaultDetail" >
         <xsd:complexType>
