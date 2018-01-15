@@ -1,0 +1,18 @@
+<schema targetNamespace="urn:uddi-org:api_v2"
+  xmlns="http://www.w3.org/2001/XMLSchema"
+  xmlns:uddi="urn:uddi-org:api_v2"
+  version="2.03" id="uddi">
+  ...
+  <element name="businessService" type="uddi:businessService"/>
+    <complexType name="businessService">
+      <sequence>
+        <element ref="uddi:name" minOccurs="0" maxOccurs="unbounded"/>
+        <element ref="uddi:description" minOccurs="0" maxOccurs="unbounded"/>
+        <element ref="uddi:bindingTemplates" minOccurs="0"/>
+        <element ref="uddi:categoryBag" minOccurs="0"/>
+      </sequence>
+      <attribute name="serviceKey" type="uddi:serviceKey" use="required"/>
+      <attribute name="businessKey" type="uddi:businessKey" use="optional"/>
+    </complexType>
+  ...
+</schema>
