@@ -1,0 +1,19 @@
+<schema targetNamespace="urn:uddi-org:api_v2"
+  xmlns="http://www.w3.org/2001/XMLSchema"
+  xmlns:uddi="urn:uddi-org:api_v2"
+  version="2.03" id="uddi">
+  ...
+  <element name="bindingTemplate" type="uddi:bindingTemplate"/>
+  <complexType name="bindingTemplate">
+    <sequence>
+      <element ref="uddi:description" minOccurs="0" maxOccurs="unbound"/>
+      <choice>
+      <element ref="uddi:accessPoint"/>
+      <element ref="uddi:hostingRedirector"/>
+      </choice>
+      <element ref="uddi:tModelInstanceDetails"/>
+    </sequence>
+    <attribute name="serviceKey" type="uddi:serviceKey" use="optional"/>
+    <attribute name="bindingKey" type="uddi:bindingKey" use="required"/>
+  </complexType>
+</schema>
