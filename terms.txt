@@ -30,3 +30,12 @@ the derived type's occurrence constraints cannot be less strict than those of it
 Web services can use One-Way messaging or Request/Response messaging. In the former, SOAP messages travel in only one
 direction, from a sender to a receiver. In the latter, a SOAP message travels from the sender to the receiver, which is
 expected to send a reply back to the sender.
+
+In many cases you will not deal directly with WSDL documents, because code generators such as JAX-RPC providers will create
+convenient language-specific call interfaces for invoking Web services. In addition, existing interfaces can be used with
+tools to generate WSDL documents, so in many cases you may not be exposed to the contents of WSDL documents at all. While a
+detailed knowledge of WSDL document structure isn't necessary when using code generators, it is important for you to 
+understand the organization and purpose of WSDL documents if you wish to truly master Web services. You have to understand
+WSDL to construct and exchange SOAP messages properly when using SOAP APIs, and these tools are often important when code
+generators are not available or are not robust enough to support your messaging requirements.
+
