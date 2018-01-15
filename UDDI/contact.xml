@@ -1,0 +1,18 @@
+<schema targetNamespace="urn:uddi-org:api_v2"
+xmlns="http://www.w3.org/2001/XMLSchema"
+xmlns:uddi="urn:uddi-org:api_v2"
+version="2.03" id="uddi">
+  ...
+  <xsd:element name="contact" type="uddi:contact"/>
+  <xsd:complexType name="contact">
+    <xsd:sequence>
+      <xsd:element ref="uddi:description" minOccurs="0" maxOccurs="unbound"/>
+      <xsd:element ref="uddi:personName"/>
+      <xsd:element ref="uddi:phone" minOccurs="0" maxOccurs="unbound"/>
+      <xsd:element ref="uddi:email" minOccurs="0" maxOccurs="unbound"/>
+      <xsd:element ref="uddi:address" minOccurs="0" maxOccurs="unbound"/>
+    </xsd:sequence>
+  <xsd:attribute name="useType" type="string" use="optional"/>
+  </xsd:complexType>
+  ...
+</schema>
