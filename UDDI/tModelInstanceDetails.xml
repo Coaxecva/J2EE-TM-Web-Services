@@ -1,0 +1,14 @@
+<bindingTemplates>
+  <bindingTemplate bindingKey="391E2620-3301-11D6-9F18-000629DC0A53"
+  <description xml:lang="en">
+    This service uses a SOAP RPC/Encoded Endpoint
+  </description>
+  <accessPoint URLType="http">
+    http://www.Monson-Haefel.com/jwsed1/BookQuote
+  </accessPoint>
+  <tModelInstanceDetails>
+    <tModelInstanceInfo
+      tModelKey="uddi:4C9D3FE0-2A16-11D6-9B59-000629DC0A53"/>
+    </tModelInstanceDetails>
+  </bindingTemplate>
+</bindingTemplates>
