@@ -1,0 +1,21 @@
+<tModel tModelKey="UUID:4C9D3FE0-2A16-11D6-9B59-000629DC0A53">
+  <name>Monson-Haefel:BookQuote</name>
+  <description xml:lang="en">
+    Provides a wholesale price given for a ISBN number.
+  </description>
+  <overviewDoc>
+    <description xml:lang="en">
+      This URL points to the BookQuote WSDL document.
+    </description>
+    <overviewURL>http://www.Monson-Haefel.com/jwsed1/BookQuote.wsdl
+    #xmlns(wsdl=http://schemas.xmlsoap.org/wsdl/) xpointer(/wsdl:definition
+    @name="BookQuoteBinding"])
+    </overviewURL>
+  </overviewDoc>
+  <categoryBag>
+    <keyedReference
+    tModelKey="uuid:C1ACF26D-9672-4404-9D70-39B756E62AB4"
+    keyName="types"
+    keyValue="wsdlSpec"/>
+  </categoryBag>
+</tModel>
