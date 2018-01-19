@@ -1,0 +1,24 @@
+<tModel tModelKey="uuid:C0B9FE13-179F-413D-8A5B-5004DB8E5BB2">
+  <name>ntis-gov:naics:1997</name>
+  <description xml:lang="en">
+    Business Taxonomy: NAICS (1997 Release)
+  </description>
+  <overviewDoc>
+    <description xml:lang="en">
+      This tModel defines the NAICS industry taxonomy.
+    </description>
+    <overviewURL>
+      http://www.uddi.org/taxonomies/UDDI_Taxonomy_tModels.htm#NAICS
+    </overviewURL>
+  </overviewDoc>
+  <categoryBag>
+    <keyedReference
+    tModelKey="uuid:C1ACF26D-9672-4404-9D70-39B756E62AB4"
+    keyName="types"
+    keyValue="categorization"/>
+    <keyedReference
+    tModelKey="uuid:C1ACF26D-9672-4404-9D70-39B756E62AB4"
+    keyName="types"
+    keyValue="checked"/>
+  </categoryBag>
+</tModel>
