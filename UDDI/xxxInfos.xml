@@ -1,0 +1,65 @@
+<schema targetNamespace="urn:uddi-org:api_v2"
+  xmlns="http://www.w3.org/2001/XMLSchema"
+  xmlns:uddi="urn:uddi-org:api_v2"
+  version="2.03" id="uddi">
+  ...
+  <element name="businessInfo" type="uddi:businessInfo"/>
+  <complexType name="businessInfo">
+    <sequence>
+      <element ref="uddi:name" maxOccurs="unbounded"/>
+      <element ref="uddi:description" minOccurs="0" maxOccurs="unbounded"/>
+      <element ref="uddi:serviceInfos"/>
+    </sequence>
+    <attribute name="businessKey" type="uddi:businessKey" use="required"/>
+  </complexType>
+    <element name="businessInfos" type="uddi:businessInfos"/>
+    <complexType name="businessInfos">
+    <sequence>
+      <element ref="uddi:businessInfo" minOccurs="0" maxOccurs="unbounded"/>
+    </sequence>
+  </complexType>
+  <element name="relatedBusinessInfo" type="uddi:relatedBusinessInfo"/>
+  <complexType name="relatedBusinessInfo">
+    <sequence>
+      <element ref="uddi:businessKey"/>
+      <element ref="uddi:name" maxOccurs="unbounded"/>
+      <element ref="uddi:description" minOccurs="0" maxOccurs="unbounded"/>
+      <element ref="uddi:sharedRelationships" maxOccurs="2"/>
+    </sequence>
+  </complexType>
+  <element name="relatedBusinessInfos" type="uddi:relatedBusinessInfo"/>
+  <complexType name="relatedBusinessInfos">
+    <sequence>
+      <element ref="uddi:relatedBusinessInfo"
+      minOccurs="0" maxOccurs="unbounded"/>
+    </sequence>
+  </complexType>
+  <element name="serviceInfo" type="uddi:serviceInfo"/>
+  <complexType name="serviceInfo">
+    <sequence>
+      <element ref="uddi:name" minOccurs="0" maxOccurs="unbounded"/>
+    </sequence>
+    <attribute name="serviceKey" type="uddi:serviceKey" use="required"/>
+    <attribute name="businessKey" type="uddi:businessKey" use="required"/>
+  </complexType>
+  <element name="serviceInfos" type="uddi:serviceInfos"/>
+  <complexType name="serviceInfos">
+    <sequence>
+      <element ref="uddi:serviceInfo" minOccurs="0" maxOccurs="unbounded"/>
+    </sequence>
+  </complexType>
+  <element name="tModelInfo" type="uddi:tModelInfo"/>
+  <complexType name="tModelInfo">
+    <sequence>
+      <element ref="uddi:name"/>
+    </sequence>
+    <attribute name="tModelKey" type="uddi:tModelKey" use="required"/>
+  </complexType>
+  <element name="tModelInfos" type="uddi:tModelInfos"/>
+  <complexType name="tModelInfos">
+    <sequence>
+      <element ref="uddi:tModelInfo" minOccurs="0" maxOccurs="unbounded"/>
+    </sequence>
+  </complexType>
+  ...
+</schema>
