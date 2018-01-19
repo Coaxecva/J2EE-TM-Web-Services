@@ -39,3 +39,10 @@ understand the organization and purpose of WSDL documents if you wish to truly m
 WSDL to construct and exchange SOAP messages properly when using SOAP APIs, and these tools are often important when code
 generators are not available or are not robust enough to support your messaging requirements.
 
+One of the things that makes UDDI interesting is that it requires support for SOAP 1.1 over HTTP. In fact, the UDDI
+specification requires that UDDI registries support a specific set of SOAP-based Web service operations called the UDDI
+Programming API.
+
+One solution to this problem would be for Web service standards organizations to define strict requirements on how
+organizations list and categorize their business Entitys, bindingTemplates, and tModels. More predictability would reduce
+the difficulty of searching a UDDI directory. The WS-I organization defines such requirements in its WS-I Basic Profile 1.0  we can hope other standards organizations follow suit.
