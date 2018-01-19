@@ -1,0 +1,18 @@
+<schema targetNamespace="urn:uddi-org:api_v2"
+  xmlns="http://www.w3.org/2001/XMLSchema"
+  xmlns:uddi="urn:uddi-org:api_v2"
+  version="2.03" id="uddi">
+  ...
+  <element name="tModel" type="uddi:tModel"/>
+  <complexType name="tModel">
+    <sequence>
+      <element ref="uddi:name"/>
+      <element ref="uddi:description" minOccurs="0" maxOccurs="unbou
+      <element ref="uddi:overviewDoc" minOccurs="0"/>
+      <element ref="uddi:identifierBag" minOccurs="0"/>
+      <element ref="uddi:categoryBag" minOccurs="0"/>
+    </sequence>
+    <attribute name="tModelKey" type="uddi:tModelKey" use="required"
+    <attribute name="operator" type="string" use="optional"/>
+    <attribute name="authorizedName" type="string" use="optional"/>
+  </complexType>
