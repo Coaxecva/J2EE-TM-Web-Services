@@ -1,0 +1,24 @@
+<schema targetNamespace="urn:uddi-org:api_v2"
+  xmlns="http://www.w3.org/2001/XMLSchema"
+  xmlns:uddi="urn:uddi-org:api_v2"
+  version="2.03" id="uddi">
+  ...
+  <!-- Request Structure -->
+  <xsd:element name="get_authToken" type="uddi:get_authToken"/>
+  <xsd:complexType name="get_authToken">
+    <xsd:attribute name="generic" type="string" use="required"/>
+    <xsd:attribute name="userID" type="string" use="required"/>
+    <xsd:attribute name="cred" type="string" use="required"/>
+  </xsd:complexType>
+  
+  <!-- Response Structure -->
+  <xsd:element name="authToken" type="uddi:authToken"/>
+  <xsd:complexType name="authToken">
+    <xsd:sequence>
+      <xsd:element ref="uddi:authInfo"/>
+    </xsd:sequence>
+    <xsd:attribute name="generic" type="string" use="required"/>
+    <xsd:attribute name="operator" type="string" use="required"/>
+  </xsd:complexType>
+  ...
+</schema>
