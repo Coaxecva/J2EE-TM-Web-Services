@@ -45,4 +45,23 @@ Programming API.
 
 One solution to this problem would be for Web service standards organizations to define strict requirements on how
 organizations list and categorize their business Entitys, bindingTemplates, and tModels. More predictability would reduce
-the difficulty of searching a UDDI directory. The WS-I organization defines such requirements in its WS-I Basic Profile 1.0  we can hope other standards organizations follow suit.
+the difficulty of searching a UDDI directory. The WS-I organization defines such requirements in its WS-I Basic Profile 1.0
+we can hope other standards organizations follow suit.
+
+Like the Inquiry API, the Publishing API is a full-fledged Web service based on SOAP's Document/Literal mode of messaging,
+and is described by a WSDL document. Unlike the Inquiry API, the Publishing API requires that UDDI operators use HTTPS (HTTP
+with SSL 3.0) for confidentiality and some form of authentication. In addition, every message except for the login must 
+include an authorization token that is automatically issued by the UDDI registry at the start of a session. Each session will
+have a unique authentication token, which is good only for the life of the session.
+
+The SOAP messages used in the Publishing API are not complicated and are defined in detail in the following sections. The API
+supports four kinds of operations: authorization operations, save operations, delete operations, and get operations. The
+authorization operations allow you to authenticate yourself, obtain an authorization token, and terminate a session and its
+authentication token. The save operations let you add or update the primary data structures. The delete operations let you
+remove primary data structures. The get operations let you view publisherAssertions and a summary of registered information.
+
+JAX-RPC is the very soul of J2EE Web Services. It defines the standard programming model for both Web service clients and
+endpoints in J2EE. There are essentially two sides to the JAX-RPC model: client-side and server-side. The client-side
+programming model allows you to access a remote Web service as if it were a local object, using methods that represent SOAP 
+operations. The server-side programming model allows you to develop Web service endpoints as Java objects or Enterprise
+JavaBeans, which run on the J2EE platform.
