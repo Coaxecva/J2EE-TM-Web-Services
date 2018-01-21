@@ -22,3 +22,29 @@
   </xsd:complexType>
   ...
 </schema>
+
+
+<!-- WSDL message and portType Definitions -->
+
+<definitions ...
+  xmlns="http://schemas.xmlsoap.org/wsdl/"
+  xmlns:uddi="urn:uddi-org:api_v2">
+  ...
+  <message name="get_authToken">
+    <part name="body" element="uddi:get_authToken"/>
+  </message>
+  <message name="authToken">
+    <part name="body" element="uddi:authToken"/>
+  </message>
+  ...
+  <portType name="Publish">
+  ...
+  <operation name="get_authToken">
+    <input message="tns:get_authToken" />
+    <output message="tns:authToken" />
+    <fault name="error" message="tns:dispositionReport" />
+  </operation>
+  ...
+  </portType>
+  ...
+</definitions>
