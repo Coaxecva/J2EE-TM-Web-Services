@@ -1,3 +1,5 @@
+// An Endpoint Interface
+
 public interface BookQuote extends java.rmi.Remote {
   public float getBookPrice(String isbn)
     throws java.rmi.RemoteException;
