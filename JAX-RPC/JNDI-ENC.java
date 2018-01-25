@@ -15,14 +15,14 @@ public class BookQuote_Impl_2 implements BookQuote {
       resultSet = sqlStatement.executeQuery(
       "SELECT wholesale FROM CATALOG WHERE isbn = \'"+isbn+"\'");
       if(resultSet.next()){
-      float price = resultSet.getFloat("wholesale");
-      return price;
+        float price = resultSet.getFloat("wholesale");
+        return price;
+      }
+      return 0;// zero means it's not stocked.
+    } catch (java.sql.SQLException se) {
+      throw new RuntimeException("JDBC access failed");
+    } catch (javax.naming.NamingException ne){
+      throw new RuntimeException("JNDI ENC access failed");
     }
-    return 0;// zero means it's not stocked.
-  } catch (java.sql.SQLException se) {
-    throw new RuntimeException("JDBC access failed");
-  } catch (javax.naming.NamingException ne){
-    throw new RuntimeException("JNDI ENC access failed");
-  }
   }
 }
