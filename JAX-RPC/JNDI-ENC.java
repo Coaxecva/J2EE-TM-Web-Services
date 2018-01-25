@@ -1,5 +1,4 @@
 //A JSE Using the JNDI ENC to Get a JDBC Connection
-
 package com.jwsbook.jaxrpc;
 public class BookQuote_Impl_2 implements BookQuote {
   public float getBookPrice(String isbn){
@@ -26,3 +25,22 @@ public class BookQuote_Impl_2 implements BookQuote {
     }
   }
 }
+
+//Using the JNDI ENC to Access a JMS ConnectionFactory
+javax.naming.InitialContext jndiEnc = new javax.naming.InitialContext();
+javax.jms.ConnectionFactory conFactory =(javax.jms.ConnectionFactory)
+                      jndiEnc.lookup("java:comp/env/jms/ConnectionFactory");
+javax.jms.Connection connection = conFactory.createConnection(username,password);
+
+//Using the JNDI ENC for Access to a JavaMail Session Object
+javax.naming.InitialContext jndiEnc = new javax.naming.InitialContext();
+javax.mail.Session session = (javax.mail.Session)
+                      jndiEnc.lookup("java:comp/env/mail/Session");
+javax.mail.internet.MimeMessage email = new
+javax.mail.internet.MimeMessage(session);
+
+//Using the JNDI ENC for Access to an Arbitrary J2EE Connector
+javax.naming.InitialContext jndiEnc = new javax.naming.InitialContext()
+javax.resource.cci.ConnectionFactory factory = (javax.resource.cci.ConnectionFactory)
+                      jndiEnc.lookup("java:comp/env/connector/VendorX");
+javax.resource.cci.Connection con = factory.getConnection();
