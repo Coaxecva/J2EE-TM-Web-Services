@@ -65,3 +65,9 @@ endpoints in J2EE. There are essentially two sides to the JAX-RPC model: client-
 programming model allows you to access a remote Web service as if it were a local object, using methods that represent SOAP 
 operations. The server-side programming model allows you to develop Web service endpoints as Java objects or Enterprise
 JavaBeans, which run on the J2EE platform.
+
+The single-threaded model was deprecated as of Java Servlets 2.4, which is the specification supported by J2EE 1.4. 
+In the future the single-threaded model will be phased out of the specification, and only the multi-threaded model will be 
+supported. You can still use the single-threaded model that's why it's covered in this book​ but it's discouraged by the 
+specification.
+
