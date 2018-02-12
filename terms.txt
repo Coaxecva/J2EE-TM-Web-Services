@@ -71,3 +71,6 @@ In the future the single-threaded model will be phased out of the specification,
 supported. You can still use the single-threaded model that's why it's covered in this book​ but it's discouraged by the 
 specification.
 
+Although the Java API for XML Messaging (JAXM) is a JSR-approved API for asynchronus SOAP messaging, it is not an official
+part of J2EE. What's more, it's not supported by major J2EE vendors, who see it as unnecessary because it overlaps with JMS 
+and JAX-RPC. It's unlikely that JAXM will be very successful in its current incarnation.
